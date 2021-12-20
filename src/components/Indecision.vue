@@ -3,8 +3,8 @@
 <div class="bg-dark"></div>
 
 <div class="indecision-container">
-    <input v-model="question" type="text" placeholder="Hazme una pregunta">
-    <p>Recuerda poner un el signo ? al final de la pregunta</p>
+    <input v-model="question" type="text" placeholder="Fes-me una pregunta">
+    <p>Recorda que tens que posar el signe   ?   al final de la pregunta</p>
 
     <div v-if="isValidQuestion"> <!-- Si la pregunta es válida-->
         <h2>{{question}}</h2>
@@ -28,7 +28,7 @@ export default {
     },
     methods: {
        async getAnswer(){
-           this.answer = 'Pensando....'
+           this.answer = 'Pensant....'
            const {answer, image} = await fetch('https://yesno.wtf/api').then(resp => resp.json())
            
            console.log(answer, image)
